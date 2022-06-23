@@ -1,4 +1,4 @@
-// seleciona variação única e esconde a mesma
+// select unique and hide the same
 $(document).ready(function(){
 	$(function(){
 		if($('.wd-product-variations .variation-group .options select option').length == 2){
