@@ -1,2 +1,4 @@
 # scriptsAgrada
-Scripts para ajudar na solução de demandas
+Scripts to help solve demands
+
+
