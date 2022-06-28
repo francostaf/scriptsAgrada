@@ -1,0 +1,44 @@
+// is necessaria edit img qrCode and pix key
+
+/*PIX escolha meio de pagamento*/
+.checkout-step .payment-method-pix .title-txt h4 {
+	display: grid;	
+}
+.checkout-step .payment-method-pix .title-txt h4:after {
+	content: 'Chave CNPJ: e-shop@estiloprimavera.com.br';
+	font-weight: bold;
+}
+/*PIX confirmação de pagamento*/
+.scan-info .qrcode-copy p span {
+	cursor: pointer;
+}
+.confirmation .confirmation-wrapper.PIX .info-wrapper .qr-col .pix-qr-code {
+	background-image:url(/custom/content/themes/Moda/Images/qrcode-estilo-primavera-2.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position-y: 0;
+	display: block;
+	width: auto;
+	max-height: 300px;
+	height: 300px;
+	margin: auto;
+	margin-bottom: 10px;
+}
+.confirmation .confirmation-wrapper.PIX .info-wrapper .expiration-info,
+.confirmation .confirmation-wrapper.PIX  button.btn-success.btn-wide {
+	display: none;
+}
+.confirmation .confirmation-wrapper.PIX .info-wrapper .qr-col .scan-info {
+	font-size: 0px;
+}
+.confirmation .confirmation-wrapper.PIX .info-wrapper .qr-col .pix-qr-code {
+	min-width: 220px !important;
+}
+.confirmation .confirmation-wrapper.PIX .info-wrapper .qr-col .inner-wrapper {
+	margin: 25px auto 50px auto !important;
+}
+@media screen and (max-width: 768px) {
+	.confirmation .confirmation-wrapper.PIX .info-wrapper .column.no-margin {
+		display: block !important;
+	}
+}
