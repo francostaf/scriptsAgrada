@@ -1,4 +1,4 @@
-//is necessarie edit number whatsApp or email (proof)
+//is required edit number whatsApp or email (proof)
 $(function () {
   ko.postbox.subscribe("checkout/payment/submit", function (response) {
     setTimeout(() => {
