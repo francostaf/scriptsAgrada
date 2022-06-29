@@ -1,0 +1,93 @@
+<style>
+  .accordion {
+    padding: 10px;
+  }
+
+  .accordion h2 {
+    text-transform: uppercase;
+  }
+
+  #accordion-list {
+    border: 1px solid #b1b1b1;
+  }
+
+  #accordion-list dt {
+    color: #b1b1b1;
+    text-transform: uppercase;
+    padding: 10px;
+    border-bottom: 1px solid #b1b1b1;
+  }
+
+  #accordion-list dd {
+    display: none;
+    margin: 0;
+    border: 1px solid #b1b1b1;
+    border-top: none;
+    padding: 10px;
+    background-color: #e3e3e3;
+  }
+
+  #accordion-list dt.active {
+    background-color: var(--ag-highlight-color);
+    color: #fff;
+  }
+
+  #accordion-list dd.active {
+    display: block;
+    animation: slideDown .5s forwards;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      max-height: 0;
+    }
+
+    to {
+      opacity: 1;
+      max-height: 250px;
+    }
+  }
+</style>
+<div class="accordion">
+  <h2>Perguntas frequentes</h2>
+  <dl data-accordions="accordions" id="accordion-list">
+    <dt>Como saber a medida do meu pneu?</dt>
+    <dd>Observe o código que aparece no costado (lateral) do pneu. Por exemplo: 175/75R13. Os dados significam, respectivamente: 175 - largura do pneu (mm); 75 - altura do pneu (mm); R - construção (geralmente radial, podendo ser diagonal “D”); 13 - diâmetro do aro em polegadas (");</dd>
+
+    <dt>Quando devo trocar os pneus?</dt>
+    <dd>Embora não haja uma regra para determinar quando o pneus devem ser trocados, existem algumas orientações a serem observadas:<br>
+      A cada 5 anos (contados a partir da data de fabricação, contida no DOT da maioria dos pneus). E, a aparição do T.W.I (Tread Wear Indicator), um indicador de exatos 1,6 mm de profundidade. Se ele estiver começando a encostar no solo, é hora de trocar o pneu;</dd>
+
+    <dt>Posso usar pneus de marcas diferentes?</dt>
+    <dd>Sim, você pode utilizar pneus de marcas diferentes, desde que não sejam no mesmo eixo</dd>
+
+    <dt>Por que é importante usar pneus que são certificados pelo Inmetro?</dt>
+    <dd>O selo do Inmetro contém indicadores que podem ser fatores decisivos na escolha do pneu, como os índices de resistência ao rolamento, aderência ao molhado e ruído externo. Além disso, indica que os pneus estão dentro das normas legais, garantindo qualidade, credibilidade e fornecendo segurança ao usuário.</dd>
+  </dl>
+</div>
+<form action="/">
+  <label for="email">Email:</label>
+  <input type="text" id="email" name="email" pattern="^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i">
+  <input type="submit">
+</form>
+
+<script>
+
+  function initAccordion() {
+    const accordionList = document.querySelectorAll('[data-accordions] dt')
+    const activeClass = "active"
+    accordionList[0].classList.add(activeClass)
+    accordionList[0].nextElementSibling.classList.add(activeClass)
+    function activeAccordion() {
+      this.classList.toggle(activeClass)
+      this.nextElementSibling.classList.toggle(activeClass)
+    }
+
+    accordionList.forEach((i) => {
+      i.addEventListener('click', activeAccordion)
+    }
+    )
+  }
+  initAccordion()
+</script>

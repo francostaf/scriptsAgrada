@@ -1,0 +1,49 @@
+.accordion {
+  padding: 10px;
+}
+
+.accordion h2 {
+  text-transform: uppercase;
+}
+
+#accordion-list {
+  border: 1px solid #b1b1b1;
+}
+
+#accordion-list dt {
+  color: #b1b1b1;
+  text-transform: uppercase;
+  padding: 10px;
+  border-bottom: 1px solid #b1b1b1;
+}
+
+#accordion-list dd {
+  display: none;
+  margin: 0;
+  border: 1px solid #b1b1b1;
+  border-top: none;
+  padding: 10px;
+  background-color: #e3e3e3;
+}
+
+#accordion-list dt.active {
+  background-color: var(--ag-highlight-color);
+  color: #fff;
+}
+
+#accordion-list dd.active {
+  display: block;
+  animation: slideDown 0.5s forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+
+  to {
+    opacity: 1;
+    max-height: 250px;
+  }
+}
