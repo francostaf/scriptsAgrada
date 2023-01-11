@@ -3,3 +3,7 @@ $('body').on('click', '.themodal-overlay.add-message-modal button.send-message',
 		$('body.themodal-lock.add-message-modal a.close.we').click();
 	}, 1000);
 });
+
+$(document).ajaxComplete(function() {
+// puxa a modal via ajax
+}
