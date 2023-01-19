@@ -15,3 +15,4 @@ $('button.btn-wide.btn-big.new-address-submit').on('click', function(e) {
 });
 
 // criar do zero: https://getbootstrap.com.br/docs/4.1/components/tooltips/
+// https://pt.stackoverflow.com/questions/110623/exibir-mensagem-e-esconder-em-alguns-segundos
