@@ -6,4 +6,4 @@ $('body').on('click', '.themodal-overlay.add-message-modal button.send-message',
 
 $(document).ajaxComplete(function() {
 // puxa a modal via ajax
-}
+});
